@@ -106,16 +106,39 @@
 // }
 
 // ques 7 1-50, prodect of /9,>40 stop:
-int main(){
-    int prod=1;
-    for(int i=1;i<=50;i++){
-        if (i>40){
-            break;
-        }
-        if (i%9==0){
-            prod*=i;
-        }
-    }
-    printf("%d",prod);
-    return 0;
-}
+// int main(){
+//     int prod=1;
+//     for(int i=1;i<=50;i++){
+//         if (i>40){
+//             break;
+//         }
+//         if (i%9==0){
+//             prod*=i;
+//         }
+//     }
+//     printf("%d",prod);
+//     return 0;
+// }
+
+// ques 8 51-100 %3or5 find unit digit add all and print sum:
+// int main(){
+//     int sum1=0;
+//     int unit;
+//     for (int i=51;i<=100;i++){
+//         if ((i%3==0) || (i%5==0)){
+//             unit = i%10;
+//             sum1+=unit;
+//         }}
+//         printf("%d",sum1);
+//     return 0;}
+
+// ques 9 print nos btw 732 and 989 wherein 1st and last digits are odd and the middle one is even
+// first digit i/100
+// last digit i%10
+// middle digit (i/10)%10 or (n % 100) / 10
+// int main(){
+//     for(int i=732;i<=989;i++){
+//         if ((i%10)%2!=0 && (i/100)%2!=0 && ((i / 10)%10)%2==0){
+//             printf("%d\n",i);
+//         }}return 0;
+// }
