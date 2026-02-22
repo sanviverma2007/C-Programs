@@ -1,4 +1,4 @@
-// // print numbers from 1 to 10
+// print numbers from 1 to 10
 // #include <stdio.h>
 // int main(){
 //     int a =1;
@@ -12,17 +12,17 @@
 // }
 
 // // print the numbers in reverse order 10 to 1
-// #include <stdio.h>
-// int main(){
-//     int a =10;
-//     fxn:
-//     printf("%d\n",a);
-//     a--;
-//     if(a>0){
-//         goto fxn;
-//     }
-//     return 0;
-// }
+#include <stdio.h>
+int main(){
+    int a =10;
+    fxn:
+    printf("%d\n",a);
+    a--;
+    if(a>0){
+        goto fxn;
+    }
+    return 0;
+}
 
 // // print your name letter be letter
 // #include <stdio.h>

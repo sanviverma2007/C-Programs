@@ -152,7 +152,7 @@ int main(){
         revo = revo * 10 + o % 10;
         o = o / 10;
     }
-
+    
     printf("%d\n",reve);
     printf("%d",revo);
     return 0;

@@ -1,16 +1,15 @@
-// #include <stdio.h>
-// #include <string.h>
-// int main(){
+#include <stdio.h>
+#include <string.h>
+int main(){
     // ans 1
-    // int sum=0;
-    // char a[]="_._Self_Lover_._";
-    // for (int i=0;i<strlen(a);i++){
-    //     if ((65<=a[i] && a[i]<=90) || (97<=a[i] && a[i]<=122)){
-    //         sum+=1;
-    //     }
-    // }
-    // printf("%d",sum);
-
+//     int sum=0;
+//     char a[]="_._Self_Lover_._";
+//     for (int i=0;i<strlen(a);i++){
+//         if ((a[i]>65 && a[i]<90) || (a[i]>97 && a[i]<122)){
+//             sum+=1;
+//         }
+//     }printf("%d",sum);
+// }
     // ans 2
     // int s=0;
     // char b[]="Innocent_Guy";
@@ -19,19 +18,19 @@
     //         s+=1;
     //     }
     // }
-    // printf("%d",s);
+    // printf("%d",s);}
 
-    // ans 3
-    // char c[]="HeArTsTeAlEr";
-    // for (int i=0;i<strlen(c);i++){
-    //     if (c[i]<=90 && c[i]>=65){
-    //         printf("%c",c[i]+32);
-    //     }else{
-    //         printf("%c",c[i]-32);
-    //     }
-    // }
-    // return 0;
-
+//     // ans 3
+//     char c[]="HeArTsTeAlEr";
+//     for (int i=0;i<strlen(c);i++){
+//         if (c[i]<=90 && c[i]>=65){
+//             printf("%c",c[i]+32);
+//         }else{
+//             printf("%c",c[i]-32);
+//         }
+//     }
+//     return 0;
+// }
     // ans 4
     // char d[]="_._MrInDiA";
     // for (int i=0;i<strlen(d);i++){
