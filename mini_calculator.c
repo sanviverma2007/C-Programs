@@ -33,6 +33,7 @@
 //     }
     
 // }
+// for area
 int main(){
     int a;
     int r,l,b,s,base,height;

@@ -232,118 +232,207 @@
 //     printf("\n\n");
 
 // SANVI VERMA
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
+// int main() {
 
-    int i, j;
+//     int i, j;
 
-    for(i = 0; i < 5; i++) {
+//     for(i = 0; i < 5; i++) {
 
-        // S
-        for(j = 0; j < 5; j++) {
-            if((i == 0 || i == 2 || i == 4) || 
-               (i == 1 && j == 0) || 
-               (i == 3 && j == 4))
-                printf("@ ");
-            else
-                printf("  ");
-        }
-        printf("   ");
+//         // S
+//         for(j = 0; j < 5; j++) {
+//             if((i == 0 || i == 2 || i == 4) || 
+//                (i == 1 && j == 0) || 
+//                (i == 3 && j == 4))
+//                 printf("@ ");
+//             else
+//                 printf("  ");
+//         }
+//         printf("   ");
 
-        // A
-        for(j = 0; j < 5; j++) {
-            if(j==0&&i>1 || j==4&&i>1 || i==1&&j==1 || i==0&&j==2 || i==1&&j==3 || i==2)
-                printf("@ ");
-            else
-                printf("  ");
-        }
-        printf("   ");
+//         // A
+//         for(j = 0; j < 5; j++) {
+//             if(j==0&&i>1 || j==4&&i>1 || i==1&&j==1 || i==0&&j==2 || i==1&&j==3 || i==2)
+//                 printf("@ ");
+//             else
+//                 printf("  ");
+//         }
+//         printf("   ");
 
-        // N
-        for(j = 0; j < 5; j++) {
-            if(j == 0 || j == 4 || j == i)
-                printf("@ ");
-            else
-                printf("  ");
-        }
-        printf("   ");
+//         // N
+//         for(j = 0; j < 5; j++) {
+//             if(j == 0 || j == 4 || j == i)
+//                 printf("@ ");
+//             else
+//                 printf("  ");
+//         }
+//         printf("   ");
 
-        // V
-        for(j = 0; j < 5; j++) {
-            if((j == 0 && i < 3) || 
-               (j == 4 && i < 3) || 
-               (i == 4 && j == 2) || i==3&&j==1 || i==3&&j==3 )
-                printf("@ ");
-            else
-                printf("  ");
-        }
-        printf("   ");
+//         // V
+//         for(j = 0; j < 5; j++) {
+//             if((j == 0 && i < 3) || 
+//                (j == 4 && i < 3) || 
+//                (i == 4 && j == 2) || i==3&&j==1 || i==3&&j==3 )
+//                 printf("@ ");
+//             else
+//                 printf("  ");
+//         }
+//         printf("   ");
 
-        // I
-        for(j = 0; j < 5; j++) {
-            if(i == 0 || i == 4 || j == 2)
-                printf("@ ");
-            else
-                printf("  ");
-        }
+//         // I
+//         for(j = 0; j < 5; j++) {
+//             if(i == 0 || i == 4 || j == 2)
+//                 printf("@ ");
+//             else
+//                 printf("  ");
+//         }
 
-        printf("           "); // Space between words
+//         printf("           "); // Space between words
 
-        // V
-        for(j = 0; j < 5; j++) {
-            if((j == 0 && i < 3) || 
-               (j == 4 && i < 3) || 
-               (i == 4 && j == 2) || i==3&&j==1 || i==3&&j==3 )
-                printf("@ ");
-            else
-                printf("  ");
-        }
-        printf("   ");
+//         // V
+//         for(j = 0; j < 5; j++) {
+//             if((j == 0 && i < 3) || 
+//                (j == 4 && i < 3) || 
+//                (i == 4 && j == 2) || i==3&&j==1 || i==3&&j==3 )
+//                 printf("@ ");
+//             else
+//                 printf("  ");
+//         }
+//         printf("   ");
 
-        // E
-        for(j = 0; j < 5; j++) {
-            if(j == 0 || i == 0 || i == 2 || i == 4)
-                printf("@ ");
-            else
-                printf("  ");
-        }
-        printf("    ");
+//         // E
+//         for(j = 0; j < 5; j++) {
+//             if(j == 0 || i == 0 || i == 2 || i == 4)
+//                 printf("@ ");
+//             else
+//                 printf("  ");
+//         }
+//         printf("    ");
 
-        // R
-        for(j = 0; j < 5; j++) {
-            if(j == 0 || 
-               (i == 0 && j < 4) || 
-               (i == 2 && j < 4) || 
-               (j == 4 && i == 1) || 
-               (j == i-1 && i > 2))
-                printf("@ ");
-            else
-                printf("  ");
-        }
-        printf("   ");
+//         // R
+//         for(j = 0; j < 5; j++) {
+//             if(j == 0 || 
+//                (i == 0 && j < 4) || 
+//                (i == 2 && j < 4) || 
+//                (j == 4 && i == 1) || 
+//                (j == i-1 && i > 2))
+//                 printf("@ ");
+//             else
+//                 printf("  ");
+//         }
+//         printf("   ");
 
-        // M
-        for(j = 0; j < 5; j++) {
-            if(j == 0 || j == 4 || 
-               (i == j && i < 3) || 
-               (i + j == 4 && i < 3))
-                printf("@ ");
-            else
-                printf("  ");
-        }
-        printf("   ");
+//         // M
+//         for(j = 0; j < 5; j++) {
+//             if(j == 0 || j == 4 || 
+//                (i == j && i < 3) || 
+//                (i + j == 4 && i < 3))
+//                 printf("@ ");
+//             else
+//                 printf("  ");
+//         }
+//         printf("   ");
 
-        // A
-        for(j = 0; j < 5; j++) {
-            if(j==0&&i>1 || j==4&&i>1 || i==1&&j==1 || i==0&&j==2 || i==1&&j==3 || i==2)
-                printf("@ ");
-            else
-                printf("  ");
-        }
+//         // A
+//         for(j = 0; j < 5; j++) {
+//             if(j==0&&i>1 || j==4&&i>1 || i==1&&j==1 || i==0&&j==2 || i==1&&j==3 || i==2)
+//                 printf("@ ");
+//             else
+//                 printf("  ");
+//         }
 
-        printf("\n");
-    }
+//         printf("\n");
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
+
+// square
+// #include <stdio.h>
+// int main(){
+//     for(int i=1;i<=4;i++){
+//         for (int j=1;j<=4;j++){
+//             printf("* ");
+//         }
+//         printf("\n");
+//     }
+// }
+
+// right angled triangle
+// #include <stdio.h>
+// int main(){
+//     for(int i=1;i>=5;i++){
+//         for (int j=1;j<=i;j++){
+//             printf("* ");
+//         }
+//         printf("\n");
+//     }
+// }
+
+// inverted triangle
+// #include <stdio.h>
+// int main(){
+//     for(int i=1;i>=5;i++){
+//         for (int j=1;j<=i;j++){
+//             printf("* ");
+//         }
+//         printf("\n");
+//     }
+// }
+
+// 123 triangle
+// #include <stdio.h>
+// int main(){
+//     for(int i=1;i<=5;i++){
+//         for (int j=1;j<=i;j++){
+//             printf("%d ",j);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// pyramid
+// #include <stdio.h>
+// int main() {
+//     int i, j;
+
+//     for(i = 1; i <= 4; i++) {
+//         for(j = 1; j <= 4 - i; j++) {
+//             printf(" ");
+//         }
+//         for(j = 1; j <= i; j++) {
+//             printf("* ");
+//         }
+
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+// abc triangle
+// #include <stdio.h>
+// int main(){
+//     for (int i=1;i<=5;i++){
+//         for(int j=0;j<i;j++){
+//             printf("%c ",'A'+j);
+//         }
+//     printf("\n");
+// }}
+
+// 1010 triangle
+// #include <stdio.h>
+// int main(){
+//     for(int i=1;i<5;i++){
+//         for(int j=0;j<i;j++){
+//             if ((i+j)%2==0){
+//                 printf("%d",0);
+//             }else{
+//                 printf("%d",1);
+//             }
+        
+//         }
+//             printf("\n");
+//     }
+// }

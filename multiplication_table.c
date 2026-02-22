@@ -1,4 +1,4 @@
-// You are using GCC
+// do while
 #include <stdio.h>
 int main(){
     int n;

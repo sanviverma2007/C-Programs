@@ -135,10 +135,32 @@
 // ques 9 print nos btw 732 and 989 wherein 1st and last digits are odd and the middle one is even
 // first digit i/100
 // last digit i%10
-// middle digit (i/10)%10 or (n % 100) / 10
+// middle digit (i/10)%10 or (n % 100) / 10 important
 // int main(){
 //     for(int i=732;i<=989;i++){
 //         if ((i%10)%2!=0 && (i/100)%2!=0 && ((i / 10)%10)%2==0){
 //             printf("%d\n",i);
 //         }}return 0;
 // }
+
+// ques 10
+#include <stdio.h>
+int main(){
+int n = 53459;
+if ((n%10)%2!=0 && (n/10000)%2!=0 && ((n/100)%10)%2==0){
+    printf("valid");
+}else{
+    printf("invalid");
+}}
+
+
+
+
+
+
+
+
+
+
+
+

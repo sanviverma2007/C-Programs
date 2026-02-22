@@ -3,7 +3,7 @@
 int main(){
     // ans 1
 //     int sum=0;
-//     char a[]="_._Self_Lover_._";
+    char a[5]="_._Self_Lover_._";
 //     for (int i=0;i<strlen(a);i++){
 //         if ((a[i]>65 && a[i]<90) || (a[i]>97 && a[i]<122)){
 //             sum+=1;
@@ -82,5 +82,6 @@ int main(){
 //         }
 //     }
 //     printf("small: %d,big: %d",sum_s,sum_b);
-// return 0;
-// }
+printf("%s",a);
+return 0;
+}

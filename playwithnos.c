@@ -10,6 +10,13 @@
 //     }
 //     printf("%d",sum);
 // }
+// using for loop
+// for (int num=2568;num>0;num=num/10){
+    //     rem = num%10;
+    //     sum+=rem;
+    // }
+    // printf("%d",sum);
+
 
 // product of odd digits
 // #include <stdio.h>
@@ -26,61 +33,68 @@
 //     printf("%d",prod);
 // }
 
+
 // print number in rev order
 // #include <stdio.h>
 // int main(){
-//     int n=2564;
-//     while (n>0){
-//         int mod= n%10;
-//         printf("%d",mod);
-//         n = n/10;
+//     int rem,a = 3456;
+//     int rev = 0;
+//     while(a>0){
+//         rem = a%10;
+//         rev= rev*10+rem;
+//         a=a/10;
 //     }
+//     printf("%d",rev);
 // }
+
 
 // pallendrome checker
 // #include <stdio.h>
 // int main(){
-//     int a = 156;
-//     int og = a;
-//     int reverse=0;
-//     int mod;
-//     while (a>0){
-//         int mod= a%10;
-//         reverse=reverse*10+mod;
-//         a = a/10;
+//     int digit, n = 12121;
+//     int og =n;
+//     int rev = 0;
+//     while(n>0){
+//         digit = n%10;
+//         rev = rev * 10 + digit;
+//         n=n/10;
 //     }
-//     if(reverse==og){
-//         printf("Pallendrome number");
+//     printf("now number is %d and its reverse is %d\n",og,rev);
+//     if (og==rev){
+//         printf("%d is an armstrong number",og);
 //     }else{
-//         printf("Not a Pallendrome number");
+//         printf("%d is not an armstrong number",og);
 //     }
 // }
+
 
 // armstrong number checker
 // #include <stdio.h>
 // #include <math.h>
 // int main(){
-//     int n=153;
-//     int og = n;
+//     int dig, digits=0;
+//     int num = 153;
+//     int og = num;
 //     int sum=0;
-//     int temp, digits = 0;
-//     temp = n;
-//     while(temp > 0){
-//         digits++;
-//         temp = temp / 10;
+//     while(num>0){
+//         digits+=1;
+//         num=num/10;
 //     }
-//     while (n>0){
-//         int mod= n%10;
-//         sum = sum+(int)(pow(mod,digits)+0.5);
-//         n = n/10;
+//     num=og;
+//     printf("no. of digits is %d\n",digits);
+//     while(num>0){
+//         dig = num%10;
+//         sum+=(int)(pow(dig,digits)+0.5);
+//         num=num/10;
 //     }
-//     printf("sum is %d and number is %d\n",sum,og);
-//     if(sum==og){
-//         printf("Armstrong Number");
+//     printf("sum is %d\n", sum);
+//     if (sum==og){
+//         printf("The number %d is armstrong",og);
 //     }else{
-//         printf("Not an armstrong number");
+//         printf("The number %d is not an armstrong number",og);
 //     }
 // }
+    
 
 
 // // largest among the sum of even digits and sum of odd digits if a numbers
@@ -129,31 +143,20 @@
 // }
 
 // 2578 28 57
-#include <stdio.h>
-int main(){
-    int mod,n= 2578;
-    int e=0;
-    int o=0;
-    int revo = 0, reve = 0;
-    while(n>0){
-        mod=n%10;
-        if(mod%2==0){
-            e=e*10+mod;
-        }else{
-            o=o*10+mod;
-        }
-        n = n/10;
-    }
-    while(e > 0){
-        reve = reve * 10 + e % 10;
-        e = e / 10;
-    }
-    while(o > 0){
-        revo = revo * 10 + o % 10;
-        o = o / 10;
-    }
-    
-    printf("%d\n",reve);
-    printf("%d",revo);
-    return 0;
+// #include <stdio.h>
+// int main(){
+//     int digit,n= 2578;
+//     int reve=0;
+//     int revo=0;
+//     while(n>0){
+//         digit=n%10;
+//         if (digit%2==0){
+//             reve=reve*10+digit;
+//         }else{
+//             revo=revo*10+digit;
+//         }
+//         n=n/10;
+//     }
+//     printf("%d\n",reve);
+//     printf("%d\n",revo);
 }
