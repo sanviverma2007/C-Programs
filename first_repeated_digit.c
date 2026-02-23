@@ -10,7 +10,7 @@ int main() {
     temp1 = n;
 
     while (temp1 > 0) {
-        digit1 = temp1 % 10;      // Take last digit
+        digit1 = temp1 % 10;     // Take last digit
         temp2 = temp1 / 10;       // Remaining number
 
         while (temp2 > 0) {
