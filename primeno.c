@@ -260,7 +260,7 @@ int main(){
         cond2=0;
     }
     if (cond1&&cond2){
-        printf("Prime Palindrome");]
+        printf("Prime Palindrome");
     }else if(cond1&&(!cond2)){}
 }
 
