@@ -179,19 +179,61 @@
 // }
 
 // 10.product of odd digits
+// #include <stdio.h>
+// int prod(int n){
+//     int pro=1;
+//     while(n>0){
+//         int mod = n%10;
+//         if (mod%2!=0){
+//             pro*=mod;
+//         }
+//         n=n/10;
+//     }
+// return pro;
+// }
+// int main(){
+//     int ans=prod(1234);
+//     printf("%d",ans);
+// }
+
+// 11. factorial
+// #include <stdio.h>
+// int fact(int num){
+//     int fact = 1;
+//     while(num>0){
+//         fact*=num;
+//         num= num-1;
+//     }
+//     return fact;
+// }
+// int main(){
+//     int ans=fact(5);
+//     printf("Factorial of number is: %d",ans);
+// }
+
+
+// 12. Fibonacci
 #include <stdio.h>
-int prod(int n){
-    int pro=1;
-    while(n>0){
-        int mod = n%10;
-        if (mod%2!=0){
-            pro*=mod;
-        }
-        n=n/10;
+void fib(int num){
+    // way 1
+    // int a=0,b=1;
+    // for(int i=1;i<=num/2;i++){
+    //     printf("%d %d ",a,b);
+    //     a=a+b;
+    //     b=a+b;
+    // }
+
+    // way 2
+    int f=0,s=1,sum=0;
+    printf("%d %d ",f,s);
+    for (int i=1;i<=num-2;i++){
+        sum=f+s;
+        f=s;
+        s=sum;
+        printf("%d ",sum);
     }
-return pro;
 }
 int main(){
-    int ans=prod(1234);
-    printf("%d",ans);
+    fib(10);
 }
+
