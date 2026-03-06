@@ -81,34 +81,7 @@
 // }
 
 // 2. PRINT LIST OF PRIME NOS. FROM 21 TO 40 
-// #include <stdio.h>
-// int isPrime(int n, int i)
-// {
-//     if (n <= 2)
-//         return (n == 2);
-//     if (n % i == 0)
-//         return 0;
-//     if (i * i > n)
-//         return 1;
 
-//     return isPrime(n, i + 1);
-// }
-// void print(int start, int end)
-// {
-//     if (start > end)
-//         return;
-
-//     if (isPrime(start, 2))
-//         printf("%d ", start);
-
-//     printPrimes(start + 1, end);
-// }
-// int main()
-// {
-//     printf("Prime numbers between 21 and 40 are:\n");
-//     print(21, 40);
-//     return 0;
-// }
 
 // 3. SUM OD ODD NOS. FROM 1 TO 50
 // #include <stdio.h>
@@ -172,35 +145,7 @@
 // }
 
 // 7. SUM OF ALL PRIME NOS. FROM 1-20
-#include <stdio.h>
 
-int isPrime(int n, int i)
-{
-    if(n <= 2)
-        return (n == 2);
-    if(n % i == 0)
-        return 0;
-    if(i * i > n)
-        return 1;
-    return isPrime(n, i + 1);
-}
-
-int sumPrimes(int n)
-{
-    if(n < 2)
-        return 0;
-
-    if(isPrime(n, 2))
-        return n + sumPrimes(n - 1);
-    else
-        return sumPrimes(n - 1);
-}
-
-int main()
-{
-    printf("Sum of prime numbers from 1 to 20 = %d", sumPrimes(20));
-    return 0;
-}
 
 // 8. PRINT VOWELS FROM NAME 
 
