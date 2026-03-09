@@ -245,3 +245,28 @@
 //     char s[50]="Sanvi";
 //     printf("%d",sum(s,0));
 // }
+
+
+// call by reference means passing the address of the variable
+#include <stdio.h>
+void numbers(int *a){
+    *a =30;
+}
+int main(){
+    int a=10;
+    numbers(&a);
+    printf("%d",a);
+}
+
+
+#include <stdio.h>
+#include <math.h>
+int main(){
+    auto int a = 25;
+    // printf("%.2f",sqrt(a));//ceil,floor,round,pow
+    printf("%d",&a);
+}
+// auto forcefully store in ram
+// register changing values in cpu registers
+// static not storing permanently, variable retains changes made
+// extern access variable from another file
