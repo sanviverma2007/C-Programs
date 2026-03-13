@@ -1,0 +1,146 @@
+//1. sum of array elements
+// #include <stdio.h>
+// int main(){
+//     int arr[]={10,20,30,40,50}; //data_type arr_name[]={elements}
+//     int n= sizeof(arr)/sizeof(arr[0]);
+//     int sum=0;
+//     for (int i=0;i<n;i++){
+//         sum=sum+arr[i];
+//     }
+//     printf("sum: %d",sum);
+// }  
+
+// questions
+// 1. find sum of all elements from array
+// 2. product of even elements
+// 3. print list of sum of digits of element of array
+// 4. sum of prime elements
+// 5. list of names starting with vowels
+// 6. list of names having even count
+// 7. product of both dig of a prime element of array
+
+// 1.
+// #include <stdio.h>
+// int main(){
+//     int sum =0;
+//     int arr[5]={10,20,30,40,50};
+//     int n= (sizeof(arr)/sizeof(arr[0]));
+//     for (int i =0; i<n; i++){
+//         sum+=arr[i];
+//     }
+//     printf("%d",sum);
+//     return 0;
+// }
+
+// 2.
+// #include <stdio.h>
+// int main(){
+//     int prod =1;
+//     int arr[5]={1,2,3,4,5};
+//     int n= (sizeof(arr)/sizeof(arr[0]));
+//     for (int i =0; i<n; i++){
+//         if(arr[i]%2==0)
+//         prod*=arr[i];
+//     }
+//     printf("product of even digits:  %d",prod);
+//     return 0;
+// }
+
+// 3. print list of sum of digits of element of array
+// #include <stdio.h>
+// int main(){
+//     int arr[5] = {11,22,33,44,55};
+//     int n= sizeof(arr)/sizeof(arr[0]);
+//     int sum_arr[5];
+//     for (int i=0;i<n;i++){
+//         int sum=0;
+//         while(arr[i]>0){
+//         int rem = arr[i]%10;
+//         sum+=rem;
+//         arr[i]=arr[i]/10;
+        
+//     }sum_arr[i]=sum;
+//     }
+//     for (int i=0;i<n;i++){
+//         printf("%d\n",sum_arr[i]);
+//     }
+// }
+
+/// 4. sum of prime elements
+// #include <stdio.h>
+// int prime(int n){
+//     int temp=1; 
+//     for (int i=2;i<n;i++){
+//         if (n%i==0){
+//             temp = 0;
+//             break;
+//         }
+//     }
+//     return temp;
+// }
+// int main(){
+//     int arr[6]={111,13,7,9};
+//     int n= sizeof(arr)/sizeof(arr[0]);
+//     int sum=0;
+//     for(int i=0;i<n;i++){
+//         if (prime(arr[i])){
+//             sum+=arr[i];
+//         }
+//     }
+//     printf("sum of prime elements: %d",sum);
+// }
+
+// 5. names with vowels
+// #include <stdio.h>
+// int main(){
+//     char names[4][20]={"Avneet","Sanvi","Ojal","Ella"};
+//     int n = sizeof(names)/sizeof(names[0]);
+//     for (int i=0; i<n;i++){
+//         if(names[i][0]=='A' || names[i][0]=='E' || names[i][0]=='I' || names[i][0]=='O' || names[i][0]=='U'){
+//             printf("%s\n",names[i]);
+//         }
+//     }
+// }
+
+// 6. even count names
+// #include <stdio.h>
+// #include <string.h>
+// int main(){
+//     char names[4][20]={"Avneet","Sanvi","Chandrika","Suhavi"};
+//     int n= sizeof(names)/sizeof(names[0]);
+//     for (int i=0;i<n;i++){
+//         if(strlen(names[i])%2==0){
+//             printf("%s\n",names[i]);
+//         }
+//     }
+// }
+
+// 7. product of both dig of a prime element of array
+// #include <stdio.h>
+// int prime(int n){
+//     int temp=1; 
+//     for (int i=2;i<n;i++){
+//         if (n%i==0){
+//             temp = 0;
+//             break;
+//         }
+//     }
+//     return temp;
+// }
+// void prod(int n){
+//     int prod=1;
+//         while(n>0){
+//         int rem = n%10;
+//         prod*=rem;
+//         n=n/10;
+// }
+//  printf("%d\n",prod);}
+
+// int main(){
+//     int num[5]={29,11,34,88,7};
+//     int n= sizeof(num)/sizeof(num[0]);
+//     for (int i=0; i<n; i++){
+//         if (prime(num[i])){
+//             prod(num[i]);
+//         }}
+// }

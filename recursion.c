@@ -33,22 +33,22 @@
 // }
 
 // print from 10 to 1
-// #include <stdio.h>
-// void printNum(int n)
-// {
-//     if(n == 0)
-//         return;
-//     printf("%d ", n);//executes before call is done
-//     printNum(n - 1);//fxn call stack memory
-// }
-// int main()
-// {
-//     int n;
-//     printf("Enter n: ");
-//     scanf("%d", &n);
-//     printNum(n);
-//     return 0;
-// }
+#include <stdio.h>
+void printNum(int n)
+{
+    if(n == 0)
+        return;
+    printf("%d ", n);
+    printNum(n - 1);
+}
+int main()
+{
+    int n;
+    printf("Enter n: ");
+    scanf("%d", &n);
+    printNum(n);
+    return 0;
+}
 
 // print from 21-40 only even
 // #include <stdio.h>
@@ -246,27 +246,3 @@
 //     printf("%d",sum(s,0));
 // }
 
-
-// call by reference means passing the address of the variable
-#include <stdio.h>
-void numbers(int *a){
-    *a =30;
-}
-int main(){
-    int a=10;
-    numbers(&a);
-    printf("%d",a);
-}
-
-
-#include <stdio.h>
-#include <math.h>
-int main(){
-    auto int a = 25;
-    // printf("%.2f",sqrt(a));//ceil,floor,round,pow
-    printf("%d",&a);
-}
-// auto forcefully store in ram
-// register changing values in cpu registers
-// static not storing permanently, variable retains changes made
-// extern access variable from another file
