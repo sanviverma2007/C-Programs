@@ -10,6 +10,7 @@
 //     printf("sum: %d",sum);
 // }  
 
+
 // questions
 // 1. find sum of all elements from array
 // 2. product of even elements
@@ -18,6 +19,7 @@
 // 5. list of names starting with vowels
 // 6. list of names having even count
 // 7. product of both dig of a prime element of array
+
 
 // 1.
 // #include <stdio.h>
@@ -32,6 +34,7 @@
 //     return 0;
 // }
 
+
 // 2.
 // #include <stdio.h>
 // int main(){
@@ -45,6 +48,7 @@
 //     printf("product of even digits:  %d",prod);
 //     return 0;
 // }
+
 
 // 3. print list of sum of digits of element of array
 // #include <stdio.h>
@@ -65,6 +69,7 @@
 //         printf("%d\n",sum_arr[i]);
 //     }
 // }
+
 
 /// 4. sum of prime elements
 // #include <stdio.h>
@@ -90,6 +95,7 @@
 //     printf("sum of prime elements: %d",sum);
 // }
 
+
 // 5. names with vowels
 // #include <stdio.h>
 // int main(){
@@ -101,6 +107,7 @@
 //         }
 //     }
 // }
+
 
 // 6. even count names
 // #include <stdio.h>
@@ -114,6 +121,7 @@
 //         }
 //     }
 // }
+
 
 // 7. product of both dig of a prime element of array
 // #include <stdio.h>
@@ -143,4 +151,107 @@
 //         if (prime(num[i])){
 //             prod(num[i]);
 //         }}
+// }
+
+// questions
+// 1.count list of names start with vowel and end with vowel
+// 2. find largest string from array
+// 3. find smallest string from array
+
+
+// #include <stdio.h>
+// #include <string.h>
+// int isVowel(char ch){
+//     // ch = tolower(ch);
+//     if (ch=='a'||ch=='e'|| ch=='o'||ch=='i'||ch=='u'){
+//         return 1;
+//     }
+//     else return 0;
+// }
+// int main(){
+//     char names[5][20] = {"doraemon","shinchan","anime","eve","adam"};
+//     int count =0;
+//     int n = sizeof(names)/sizeof(names[0]);
+//     for (int i=0;i<n;i++){
+//         if (isVowel(names[i][0]) && isVowel(names[i][strlen(names[i])-1])){
+//             count+=1;
+//         }
+//     }
+//     printf("number of elements beginning and ending with vowel is %d",count);
+// }
+
+// #include <stdio.h>
+// #include <string.h>
+// int main() {
+//     char names[5][20] = {"Ram", "Shyam", "Alexander", "Amit", "Ravi"};
+//     int maxLen = 0;
+//     int n= sizeof(names)/sizeof(names[0]);
+//     for(int i = 0; i < n; i++) {
+//         int len = strlen(names[i]);
+//         if(len > maxLen) {
+//             maxLen = len;
+//         }
+//     }
+//     printf("Number of letters in longest name = %d\n", maxLen);
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// #include <string.h>
+// int main() {
+//     char names[5][20] = {"Ram", "Shyam", "Alexander", "Amit", "Ravi"};
+//     int minLen = strlen(names[0]);
+//     int n= sizeof(names)/sizeof(names[0]);
+//     for(int i = 0; i < n; i++) {
+//         int len = strlen(names[i]);
+//         if(len < minLen) {
+//             minLen = len;
+//         }
+//     }
+//     printf("Number of letters in shortest name = %d\n", minLen);
+//     return 0;
+// }
+
+
+// 4. print list of elements from array having more than 3 vowels count
+// #include <stdio.h>
+// #include <string.h>
+// int isVowel(char ch){
+//     if( ch == 'a' || ch =='e' || ch == 'i' || ch =='o' || ch=='u'){
+//         return 1;
+//     }else return 0;
+// }
+// int main(){
+//     char arr[3][20] = {"aaclee","banana","ourage"};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+//     for (int i=0;i<n;i++){
+//         int count =0;
+//         for (int j=0;j<strlen(arr[i]);j++){
+//             if (isVowel(arr[i][j])){
+//                 count+=1;
+//             }
+//         }
+//         if (count>3){
+//             printf("%s\n",arr[i]);
+//         }
+// }}
+
+
+// 5. print list of string elements having odd count
+// #include <stdio.h>
+// #include <string.h>
+// int main(){
+//     char names[4][20]={"Suhavi","Sanvi","Avneet","Shagun"};
+//     int n = sizeof(names)/sizeof(names[0]);
+//     for (int i=0;i<n;i++){
+//         int count =0;
+//         for (int j=0;j<strlen(names[i]);j++){
+//             count+=1;
+//         }
+//         if (count%2!=0){
+//             printf("%s\n",names[i]);
+//         }
+//     }
+
 // }
