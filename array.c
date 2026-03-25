@@ -183,16 +183,18 @@
 // #include <stdio.h>
 // #include <string.h>
 // int main() {
-//     char names[5][20] = {"Ram", "Shyam", "Alexander", "Amit", "Ravi"};
+//     char names[5][20] = {"Ram", "Shyamaaaa", "Alexander", "Amit", "Ravi"};
 //     int maxLen = 0;
+//     int j;
 //     int n= sizeof(names)/sizeof(names[0]);
 //     for(int i = 0; i < n; i++) {
 //         int len = strlen(names[i]);
 //         if(len > maxLen) {
 //             maxLen = len;
-//         }
-//     }
-//     printf("Number of letters in longest name = %d\n", maxLen);
+//             j=i;
+//     }}
+//     printf(names[j]);
+//     printf("\nNumber of letters in longest name = %d\n", maxLen);
 //     return 0;
 // }
 
@@ -201,16 +203,18 @@
 // #include <string.h>
 // int main() {
 //     char names[5][20] = {"Ram", "Shyam", "Alexander", "Amit", "Ravi"};
+//     int j=0;
 //     int minLen = strlen(names[0]);
 //     int n= sizeof(names)/sizeof(names[0]);
 //     for(int i = 0; i < n; i++) {
 //         int len = strlen(names[i]);
 //         if(len < minLen) {
 //             minLen = len;
+//             j=i;
 //         }
 //     }
-//     printf("Number of letters in shortest name = %d\n", minLen);
-//     return 0;
+//     printf(names[j]);
+//     printf("\nNumber of letters in shortest name = %d\n", minLen);
 // }
 
 
