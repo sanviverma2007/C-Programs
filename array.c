@@ -241,7 +241,6 @@
 //         }
 // }}
 
-
 // 5. print list of string elements having odd count
 // #include <stdio.h>
 // #include <string.h>
@@ -257,5 +256,45 @@
 //             printf("%s\n",names[i]);
 //         }
 //     }
-
 // }
+
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char arr1[5] = {'8','7','5','2','9'};
+//  print digit version of it
+    int n1 = sizeof(arr1)/sizeof(arr1[0]);
+    int sum1=0;
+    for(int i=0;i<n1;i++){
+        int num = (int)arr1[i];
+        sum1+= (num-48);
+    }
+    printf("sum of elements of arr 1: %d ",sum1);
+
+   char arr2[5][10] = {"67","78","24","53","11"};
+//    print sum of digits of an element
+    int n2 = sizeof(arr2)/sizeof(arr2[0]);
+    for (int i=0;i<n2;i++){
+         int len = strlen(arr2[i]);
+         int sum2=0;
+        for (int j=0;j<len;j++){
+            int dig=(int)arr2[i][j];
+            sum2+=(dig-48);
+        }
+        printf("%d ",sum2);
+    }
+
+    int arr3[7] = {678,56,12,34,90,102,45};
+    // print sum of digits of an element
+    int n3= sizeof(arr3)/sizeof(arr3[0]);
+    for(int i=0;i<n3;i++){
+        int sum=0;
+        int n  = arr3[i];
+        while (n>0){
+            int rem = n % 10;
+            sum+=rem;
+            n /=10;
+        }
+        printf("%d ", sum);
+    }
+}
