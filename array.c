@@ -258,43 +258,91 @@
 //     }
 // }
 
-#include <stdio.h>
-#include <string.h>
-int main(){
-    char arr1[5] = {'8','7','5','2','9'};
+// #include <stdio.h>
+// #include <string.h>
+// int main(){
+    // char arr1[5] = {'8','7','5','2','9'};//1d array
 //  print digit version of it
-    int n1 = sizeof(arr1)/sizeof(arr1[0]);
-    int sum1=0;
-    for(int i=0;i<n1;i++){
-        int num = (int)arr1[i];
-        sum1+= (num-48);
-    }
-    printf("sum of elements of arr 1: %d ",sum1);
+//     int n1 = sizeof(arr1)/sizeof(arr1[0]);
+//     int sum1=0;
+//     for(int i=0;i<n1;i++){
+//         int num = (int)arr1[i];
+//         sum1+= (num-48);
+//     }
+//     printf("sum of elements of arr 1: %d ",sum1);
 
-   char arr2[5][10] = {"67","78","24","53","11"};
-//    print sum of digits of an element
-    int n2 = sizeof(arr2)/sizeof(arr2[0]);
-    for (int i=0;i<n2;i++){
-         int len = strlen(arr2[i]);
-         int sum2=0;
-        for (int j=0;j<len;j++){
-            int dig=(int)arr2[i][j];
-            sum2+=(dig-48);
-        }
-        printf("%d ",sum2);
-    }
+//    char arr2[5][10] = {"67","78","24","53","11"};//2d array
+// //    print sum of digits of an element
+//     int n2 = sizeof(arr2)/sizeof(arr2[0]);
+//     for (int i=0;i<n2;i++){
+//          int len = strlen(arr2[i]);
+//          int sum2=0;
+//         for (int j=0;j<len;j++){//can be done without 2nd for loop as the arr has only 2 digit nos, declare 2 variables corresponding to the first and second digit and add them
+//             int dig=(int)arr2[i][j];
+//             sum2+=(dig-48);
+//         }
+//         printf("%d ",sum2);
+//     }
 
-    int arr3[7] = {678,56,12,34,90,102,45};
-    // print sum of digits of an element
-    int n3= sizeof(arr3)/sizeof(arr3[0]);
-    for(int i=0;i<n3;i++){
-        int sum=0;
-        int n  = arr3[i];
-        while (n>0){
-            int rem = n % 10;
-            sum+=rem;
-            n /=10;
-        }
-        printf("%d ", sum);
-    }
-}
+// passing array ti fxn
+// #include <stdio.h>
+// void printArr(int arr[10],int n){
+//     for (int i=0;i<n;i++){
+//         printf("%d ", arr[i]);
+//     }
+// }
+// int main(){
+//     int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+//     int n= sizeof(arr)/sizeof(arr[0]);
+//     printArr(arr,n);
+// }
+
+
+// #include <stdio.h>
+// #include <string.h>
+// // 1. even
+// void evenDig(char arr[][10],int n){
+//     for(int i=0;i<n;i++){
+//         int len = strlen(arr[i]);
+//         for(int j=0;j<len;j++){
+//             int dig= (int) arr[i][j];
+//             int digit = dig-48;
+//             if (digit%2==0){
+//                 printf("%d ",digit);
+//             }
+//         }printf("\n");
+//     }
+// }
+// // 2. odd
+// void oddDig(char arr[][10],int n){
+//     for(int i=0;i<n;i++){
+//         int len = strlen(arr[i]);
+//         for(int j=0;j<len;j++){
+//             int dig= (int) arr[i][j];
+//             int digit = dig-48;
+//             if (digit%2!=0){
+//                 printf("%d ",digit);
+//             }
+//         }printf("\n");
+//     }
+// }
+// void oddEven(char arr[][10],int n){
+//     for (int i=0;i<n;i++){
+//         int len =strlen(arr[i]);
+//         int ld = arr[i][3];
+//         if(ld%2==0){
+//             printf("Even\n");
+//         }else{
+//             printf("Odd\n");
+//         }
+
+//     }
+
+// } 
+// int main(){
+//     char arr[5][10] = {"6789","1234","2468","1357","5678"};
+//     int n= sizeof(arr)/sizeof(arr[0]);
+//     // evenDig(arr,n);
+//     // oddDig(arr,n);
+//     oddEven(arr,n);
+// }
