@@ -346,3 +346,155 @@
 //     // oddDig(arr,n);
 //     oddEven(arr,n);
 // }
+
+// linear search class questions
+// #include <stdio.h>
+// int main(){
+//     int arr[]={12,22,33,100,56,2};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+//     int target = 56;
+//     int index=-1;
+//     for(int i=0;i<n;i++){
+//         if(arr[i]==target){
+//             index = i;
+//             break;
+//         }
+//     }
+//     printf("%d",index);
+// }
+
+
+// 1. replace the target element using linear search
+// #include <stdio.h>
+// int main(){
+//     int n;
+//     scanf("%d",&n);
+//     int arr[n];
+//     for(int i=0;i<n;i++){
+//         scanf("%d",&arr[i]);
+//     }
+//     int target;
+//     scanf("%d",&target);
+//     int new ;
+//     scanf("%d",&new);
+//     for(int i=0;i<n;i++){
+//         if(arr[i]==target){
+//             arr[i]=new;
+//         }
+//     }
+//     for(int i=0;i<n;i++){
+//         printf("%d ",arr[i]);
+//     }
+// }
+
+// 2.print the list of elements within a specific range
+//  #include <stdio.h>
+// int main(){
+//     int arr[]={12,22,33,100,56,2};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+//     int start = 30;
+//     int end=60;
+//     for(int i=0;i<n;i++){
+//         if(arr[i]<=end && arr[i]>=start){
+//             printf("%d ",arr[i]);
+//         }
+//     }
+// }
+
+// 3.print list of elements which is not in specific range
+// #include <stdio.h>
+// int main(){
+//     int arr[]={12,22,33,100,56,2};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+//     int start = 30;
+//     int end=60;
+//     for(int i=0;i<n;i++){
+//         if(arr[i]>end || arr[i]<start){
+//             printf("%d ",arr[i]);
+//         }
+//     }
+// }
+
+// 4.swap the first and last element of the array
+// #include <stdio.h>
+// int main(){
+//     int n;
+//     printf("Enter number of elements: ");
+//     scanf("%d",&n);
+//     int arr[n];
+//     printf("Enter elements of array (press enter after each input):  ");
+//    for(int i=0;i<n;i++){
+//         scanf("%d",&arr[i]);
+//     }
+//     int first = 0;
+//     int last = n-1;
+//     int temp;
+//     temp=arr[first];
+//     arr[first]=arr[last];
+//     arr[last]=temp;
+//     for(int i=0;i<n;i++){
+//             printf("%d ",arr[i]);
+//         }
+// }
+
+// 5.find out the sum of first largest and second largest of the array
+// #include <stdio.h>
+// int main(){
+//     int n;
+//     printf("Enter number of elements: ");
+//     scanf("%d",&n);
+//     int arr[n];
+//     printf("Enter elements of array (press enter after each input):  ");
+//    for(int i=0;i<n;i++){
+//         scanf("%d",&arr[i]);
+//     }
+//     int largest = 0;
+//     int second = -1;
+//     for (int i=1; i<n;i++){
+//         if (arr[i]>largest){
+//             second = largest;
+//             largest = arr[i];
+//         }else if (arr[i]>second && arr[i]<largest){
+//             second = arr[i];
+//         }
+//     }
+//     printf("largest element is %d\n",largest);
+//     printf("second largest element is %d\n",second);
+//     int sum=largest+second;
+//     printf("Sum of largest and second largest is %d",sum);
+// }
+
+// BINARY SEARCH
+#include <stdio.h>
+int main(){
+    int n;
+    printf("Enter number of elements: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter elements of array (press enter after each input):  ");
+   for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    int value;
+    printf("Enter target element: ");
+    scanf("%d",&value);
+    int start=0,end = n-1;
+    int pos=-1;
+    while(start<=end){
+    int mid = start + (end-start)/2;
+    if(arr[mid]>value){
+        end=mid-1;
+    }
+    else if (arr[mid]<value){
+        start=mid+1;
+    }else{
+        pos = mid;
+        break;
+    }}
+    if(pos!=-1){
+        printf("%d is present at index %d",value,pos);
+    }else{
+        printf("Not found");
+    }
+}
+
