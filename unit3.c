@@ -24,7 +24,7 @@
 // int main(){
 //     printf("%.f\n",ceil(4.2));
 //     printf("%.f\n",floor(4.2));
-//     printf("%.f\n",round(4.5));
+//     printf("%.f\n",round(4.4));
 //     printf("%.f\n",pow(2,3));
 //     printf("%.f",sqrt(4));
 // }
@@ -52,7 +52,7 @@
 // }
 
 
-// 7. regiser
+// 7. register
 // #include <stdio.h>
 
 // int main() {
@@ -63,17 +63,17 @@
 //     return 0;
 // }
 
-// 8.static
-// #include <stdio.h>
+// 8.static🫶🏻
+#include <stdio.h>
 
-// void func() {
-//     static int x = 0;
-//     x++;
-//     printf("%d\n", x);
-// }
+void func() {
+    static int x = 0;
+    x++;
+    printf("%d\n", x);
+}
 
-// int main() {
-//     func();
-//     func();
-//     func();
-// }
+int main() {
+     func();
+    func();
+    func();
+}

@@ -1,13 +1,13 @@
 // // max of 3 nos without if, ternary
-// #include <stdio.h>
-// int main(){
-//     int a,b,c,max1,max;
-//     scanf("%d %d %d",&a,&b,&c);
-//     max1 = a*(a>b) + b*(b>=a);
-//     max = c*(c>max1)+ max1*(max1>c);
-//     printf("max is %d",max);
-//     return 0;
-// }
+#include <stdio.h>
+int main(){
+    int a,b,c,max1,max;
+    scanf("%d %d %d",&a,&b,&c);
+    max1 = a*(a>b) + b*(b>=a);
+    max = c*(c>max1)+ max1*(max1>c);
+    printf("max is %d",max);
+    return 0;
+}
 
 // // pallendrome checker
 // #include <stdio.h>

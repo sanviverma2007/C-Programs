@@ -261,8 +261,8 @@
 // #include <stdio.h>
 // #include <string.h>
 // int main(){
-    // char arr1[5] = {'8','7','5','2','9'};//1d array
-//  print digit version of it
+//     char arr1[5] = {'8','7','5','2','9'};//1d array
+// //  print digit version of it
 //     int n1 = sizeof(arr1)/sizeof(arr1[0]);
 //     int sum1=0;
 //     for(int i=0;i<n1;i++){
@@ -438,31 +438,31 @@
 // }
 
 // 5.find out the sum of first largest and second largest of the array
-// #include <stdio.h>
-// int main(){
-//     int n;
-//     printf("Enter number of elements: ");
-//     scanf("%d",&n);
-//     int arr[n];
-//     printf("Enter elements of array (press enter after each input):  ");
-//    for(int i=0;i<n;i++){
-//         scanf("%d",&arr[i]);
-//     }
-//     int largest = 0;
-//     int second = -1;
-//     for (int i=1; i<n;i++){
-//         if (arr[i]>largest){
-//             second = largest;
-//             largest = arr[i];
-//         }else if (arr[i]>second && arr[i]<largest){
-//             second = arr[i];
-//         }
-//     }
-//     printf("largest element is %d\n",largest);
-//     printf("second largest element is %d\n",second);
-//     int sum=largest+second;
-//     printf("Sum of largest and second largest is %d",sum);
-// }
+#include <stdio.h>
+int main(){
+    int n;
+    printf("Enter number of elements: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter elements of array (press enter after each input):  ");
+   for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    int largest = 0;
+    int second = -1;
+    for (int i=1; i<n;i++){
+        if (arr[i]>largest){
+            second = largest;
+            largest = arr[i];
+        }else if (arr[i]>second && arr[i]<largest){
+            second = arr[i];
+        }
+    }
+    printf("largest element is %d\n",largest);
+    printf("second largest element is %d\n",second);
+    int sum=largest+second;
+    printf("Sum of largest and second largest is %d",sum);
+}
 
 // BINARY SEARCH
 #include <stdio.h>

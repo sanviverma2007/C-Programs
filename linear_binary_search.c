@@ -1,4 +1,4 @@
-// linear search
+// // linear search
 // #include <stdio.h>
 // int main(){
 //     int n=5;

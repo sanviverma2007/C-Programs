@@ -144,14 +144,14 @@
 // }
 
 // ques 10
-#include <stdio.h>
-int main(){
-int n = 53459;
-if ((n%10)%2!=0 && (n/10000)%2!=0 && ((n/100)%10)%2==0){
-    printf("valid");
-}else{
-    printf("invalid");
-}}
+// #include <stdio.h>
+// int main(){
+// int n = 53459;
+// if ((n%10)%2!=0 && (n/10000)%2!=0 && ((n/100)%10)%2==0){
+//     printf("valid");
+// }else{
+//     printf("invalid");
+// }}
 
 
 

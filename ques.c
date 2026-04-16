@@ -1,46 +1,40 @@
 // octal number
-// #include <stdio.h>
-// #include <math.h>
+#include <stdio.h>
+#include <math.h>
 
-// int main() {
-//     int octal, decimal = 0, i = 0, remainder;
+int main() {
+    int octal, decimal = 0, i = 0, remainder;
 
-//     printf("Enter an octal number: ");
-//     scanf("%d", &octal);
+    printf("Enter an octal number: ");
+    scanf("%d", &octal);
 
-//     while (octal != 0) {
-//         remainder = octal % 10;          // Get last digit
-//         decimal += remainder * pow(8, i); // Multiply with 8^position
-//         octal = octal / 10;              // Remove last digit
-//         i++;
-//     }
+    while (octal != 0) {
+        remainder = octal % 10;          // Get last digit
+        decimal += remainder * pow(8, i); // Multiply with 8^position
+        octal = octal / 10;              // Remove last digit
+        i++;
+    }
 
-//     printf("Equivalent decimal number = %d", decimal);
+    printf("Equivalent decimal number = %d", decimal);
 
-//     return 0;
-// }
+    return 0;
+}
 
 // // goto statement
 // #include <stdio.h>
-
 // int main() {
 //     int num;
-
 //     printf("Enter a number: ");
 //     scanf("%d", &num);
-
 //     if (num % 2 == 0)
 //         goto EVEN;
 //     else
 //         goto ODD;
-
 // EVEN:
 //     printf("The number is Even.");
 //     goto END;
-
 // ODD:
 //     printf("The number is Odd.");
-
 // END:
 //     return 0;
 // }
@@ -73,14 +67,14 @@
 //     return 0;
 // }
 
-#include <stdio.h>
-int main(){
-    char name[2];
-    scanf("%s",name);
-    printf("%s",name);
-    // gets(name);
-    // puts(name);
-    // a = getchar();
-    // putchar(a);
-    return 0;
-}
+// #include <stdio.h>
+// int main(){
+//     char name[2];
+//     scanf("%s",name);
+//     printf("%s",name);
+//     // gets(name);
+//     // puts(name);
+//     // a = getchar();
+//     // putchar(a);
+//     return 0;
+// }

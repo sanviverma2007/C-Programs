@@ -202,45 +202,45 @@
 // }
 
 // // 8. delete all occurrences of 3
-// #include <stdio.h>
-// int main(){
-//     int arr[10]={5,3,5,6,3};
-//     int n=5;
-//     int pos = -1;
-//     int value = 3;
-//     for(int i=0;i<n;i++){
-//         if(arr[i]==value){
-//         for(int j=i;j<n-1;j++){
-//         arr[j]=arr[j+1];
-//     }
-//     n--;
-//     i--;
-//         }
-//     }
-//     for(int i=0;i<n;i++){
-//         printf("%d ",arr[i]);
-//     }
-// }
+#include <stdio.h>
+int main(){
+    int arr[10]={5,3,5,6,3};
+    int n=5;
+    int pos = -1;
+    int value = 3;
+    for(int i=0;i<n;i++){
+        if(arr[i]==value){
+        for(int j=i;j<n-1;j++){
+        arr[j]=arr[j+1];
+    }
+    n--;
+    i--;
+        }
+    }
+    for(int i=0;i<n;i++){
+        printf("%d ",arr[i]);
+    }
+}
 
 // 9. multi insertion 
-// #include <stdio.h>
-// int main() {
-//     int arr[20] = {1,2,3,4,5};
-//     int n = 5;
-//     int pos = 2;
-//     int newArr[] = {10,20,30};
-//     int k = 3;
-//     for(int i=n-1;i>pos;i--){
-//         arr[i+k]=arr[i];
-//     }
-//     n+=k;
-//     for(int i=0;i<k;i++){
-//         arr[i+k]=newArr[i];
-//     }
-//         for(int i=0;i<n;i++){
-//         printf("%d ",arr[i]);
-//     }
-// }
+#include <stdio.h>
+int main() {
+    int arr[20] = {1,2,3,4,5};
+    int n = 5;
+    int pos = 2;
+    int newArr[] = {10,20,30};
+    int k = 3;
+    for(int i=n-1;i>pos;i--){
+        arr[i+k]=arr[i];
+    }
+    n+=k;
+    for(int i=0;i<k;i++){
+        arr[i+k]=newArr[i];
+    }
+        for(int i=0;i<n;i++){
+        printf("%d ",arr[i]);
+    }
+}
 
 // 10. insert into sorted array
 // #include <stdio.h>
@@ -290,79 +290,148 @@
 // }
 
 //12. find union of 2 arrays
+#include <stdio.h>
+void findUnion(int arr1[], int n1, int arr2[], int n2) {
+    int i = 0, j = 0;
+    int lastPrinted = -1; // to avoid duplicates
+
+    while (i < n1 && j < n2) {
+        if (arr1[i] < arr2[j]) {
+            if (arr1[i] != lastPrinted) {
+                printf("%d ", arr1[i]);
+                lastPrinted = arr1[i];
+            }
+            i++;
+        }
+        else if (arr2[j] < arr1[i]) {
+            if (arr2[j] != lastPrinted) {
+                printf("%d ", arr2[j]);
+                lastPrinted = arr2[j];
+            }
+            j++;
+        }
+        else {
+            if (arr1[i] != lastPrinted) {
+                printf("%d ", arr1[i]);
+                lastPrinted = arr1[i];
+            }
+            i++;//imp to update both
+            j++;
+        }
+    }
+
+    // Remaining elements for the array left 
+    while (i < n1) {
+        if (arr1[i] != lastPrinted) {
+            printf("%d ", arr1[i]);
+            lastPrinted = arr1[i];
+        }
+        i++;
+    }
+
+    while (j < n2) {
+        if (arr2[j] != lastPrinted) {
+            printf("%d ", arr2[j]);
+            lastPrinted = arr2[j];
+        }
+        j++;
+    }
+}
+
+int main() {
+    int n1, n2;
+
+    scanf("%d", &n1);
+    int arr1[n1];
+    for (int i = 0; i < n1; i++) {
+        scanf("%d", &arr1[i]);
+    }
+
+    scanf("%d", &n2);
+    int arr2[n2];
+    for (int i = 0; i < n2; i++) {
+        scanf("%d", &arr2[i]);
+    }
+
+    findUnion(arr1, n1, arr2, n2);
+
+    return 0;
+}
+
+
+
 // #include <stdio.h>
-// void findUnion(int arr1[], int n1, int arr2[], int n2) {
-//     int i = 0, j = 0;
-//     int lastPrinted = -1; // to avoid duplicates
+// int main(){
+//     int arr[100]={10,20,30,40,50};
+//     int value1= 100,value2 = 200,value3 = 300;
+//     int n=5;
+//     int pos = 3;
+//     arr[n]=value1;
+//     n++;
+//     for(int i=n-1;i>=0;i--){
+//         arr[i+1]=arr[i];
+//     }
+//     arr[0]=value2;
+//     n++;
+//     for(int i=n-1;i>=pos;i--){
+//         arr[i+1]=arr[i];
+//     }
+//     arr[pos]=value3;
+//     n++;
+//     for(int i=0;i<n;i++){
+//         printf("%d ",arr[i]);
+// }}
 
-//     while (i < n1 && j < n2) {
-//         if (arr1[i] < arr2[j]) {
-//             if (arr1[i] != lastPrinted) {
-//                 printf("%d ", arr1[i]);
-//                 lastPrinted = arr1[i];
-//             }
-//             i++;
-//         }
-//         else if (arr2[j] < arr1[i]) {
-//             if (arr2[j] != lastPrinted) {
-//                 printf("%d ", arr2[j]);
-//                 lastPrinted = arr2[j];
-//             }
-//             j++;
-//         }
-//         else {
-//             if (arr1[i] != lastPrinted) {
-//                 printf("%d ", arr1[i]);
-//                 lastPrinted = arr1[i];
-//             }
-//             i++;//imp to update both
-//             j++;
+// QUESTIONS
+// 1.INSERT ELEMENT IN SORTED ARRAY
+// 2. CHECK THE ELEMENT IS ALREADY INSERTED OR NOT
+// 3. DELETE NAMES FROM CHAR ARRAY
+// 4. INSERT NEW NAME AT SPECIFIC POSITION
+
+// #include <stdio.h>
+// int main(){
+//     int arr[10]={10,20,30,40,50,60};
+//     int index,size = 6;
+//     int element = 35;
+//     for(int i=0;i<size;i++){
+//         if(arr[i]>element){
+//             index=i;
+//             break;
 //         }
 //     }
-
-//     // Remaining elements for the array left 
-//     while (i < n1) {
-//         if (arr1[i] != lastPrinted) {
-//             printf("%d ", arr1[i]);
-//             lastPrinted = arr1[i];
-//         }
-//         i++;
+//     for(int i=size-1;i>=index;i--){
+//         arr[i+1]=arr[i];
 //     }
+//     arr[index]=element;
+//     size++;
+//     for(int i=0;i<size;i++){
+//         printf("%d ",arr[i]);
+// }
+// }
 
-//     while (j < n2) {
-//         if (arr2[j] != lastPrinted) {
-//             printf("%d ", arr2[j]);
-//             lastPrinted = arr2[j];
+// #include <stdio.h>
+// int main(){
+//     int arr[10]={10,20,30,40,50,60};
+//     int temp=0,size = 6;
+//     int element = 400;
+//     for(int i=0;i<size;i++){
+//         if(arr[i]==element){
+//             temp=1;
 //         }
-//         j++;
+//     }
+//     if(temp==1){
+//         printf("Already inserted.\n");
+//     }else{
+//         arr[size]=element;
+//         size++;
+//         printf("Element inserted successfully\n");
+//     }
+//     for(int i=0;i<size;i++){
+//         printf("%d ",arr[i]);
 //     }
 // }
 
-// int main() {
-//     int n1, n2;
-
-//     scanf("%d", &n1);
-//     int arr1[n1];
-//     for (int i = 0; i < n1; i++) {
-//         scanf("%d", &arr1[i]);
-//     }
-
-//     scanf("%d", &n2);
-//     int arr2[n2];
-//     for (int i = 0; i < n2; i++) {
-//         scanf("%d", &arr2[i]);
-//     }
-
-//     findUnion(arr1, n1, arr2, n2);
-
-//     return 0;
-// }
-
-
-// resume from 13 of gpt
-
-
-
+// 
 
 
 

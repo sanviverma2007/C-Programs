@@ -1,38 +1,38 @@
 #include <stdio.h>
 // MINI CALCULATOR
-// int main(){
-//     char c;
-//     int a,b;
-//     printf("Enter char:");
-//     scanf("%c",&c);
-//     printf("Enter a:");
-//     scanf("%d",&a);
-//     printf("Enter b:");
-//     scanf("%d",&b);
+int main(){
+    char c;
+    int a,b;
+    printf("Enter char:");
+    scanf("%c",&c);
+    printf("Enter a:");
+    scanf("%d",&a);
+    printf("Enter b:");
+    scanf("%d",&b);
 
-//     switch(c){
-//         case '+':
-//         printf("Addition\n");
-//         printf("%d+%d=%d",a,b,a+b);
-//         break;
-//         case '-':
-//         printf("Subtraction\n");
-//         printf("%d-%d=%d",a,b,a-b);
-//         break;
-//         case '*':
-//         printf("Multiplication\n");
-//         printf("%d*%d=%d",a,b,a*b);
-//         break;
-//         case '/':
-//         printf("Division\n");
-//         printf("%d/%d=%d",a,b,a/b);
-//         break;
-//         default:
-//         printf("Put valid Symbol\n");
-//         break;
-//     }
+    switch(c){
+        case '+':
+        printf("Addition\n");
+        printf("%d+%d=%d",a,b,a+b);
+        break;
+        case '-':
+        printf("Subtraction\n");
+        printf("%d-%d=%d",a,b,a-b);
+        break;
+        case '*':
+        printf("Multiplication\n");
+        printf("%d*%d=%d",a,b,a*b);
+        break;
+        case '/':
+        printf("Division\n");
+        printf("%d/%d=%d",a,b,a/b);
+        break;
+        default:
+        printf("Put valid Symbol\n");
+        break;
+    }
     
-// }
+}
 // for area
 int main(){
     int a;

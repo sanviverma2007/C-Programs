@@ -229,79 +229,79 @@
 // }
 
 // 12 prime palendrome
-#include <stdio.h>
-int main(){
-    int digit, n = 12121;
-    int og =n;
-    int rev = 0;
-    int cond1=0;
-    int cond2=0;
-    while(n>0){
-        digit = n%10;
-        rev = rev * 10 + digit;
-        n=n/10;
-    }
-    printf("now number is %d and its reverse is %d\n",og,rev);
-    if (og==rev){
-        cond1=1;
-    }else{
-        cond1=0;
-    }
-    int temp =0;
-    for (int i=2;i<rev;i++){
-        if (rev%i==0){
-            temp =1;
-            break;
-        }
-    }
-    if (temp==0){
-        cond2=1;
-    }else{
-        cond2=0;
-    }
-    if (cond1&&cond2){
-        printf("Prime Palindrome");
-    }else if(cond1&&(!cond2)){}
-}
+// #include <stdio.h>
+// int main(){
+//     int digit, n = 12121;
+//     int og =n;
+//     int rev = 0;
+//     int cond1=0;
+//     int cond2=0;
+//     while(n>0){
+//         digit = n%10;
+//         rev = rev * 10 + digit;
+//         n=n/10;
+//     }
+//     printf("now number is %d and its reverse is %d\n",og,rev);
+//     if (og==rev){
+//         cond1=1;
+//     }else{
+//         cond1=0;
+//     }
+//     int temp =0;
+//     for (int i=2;i<rev;i++){
+//         if (rev%i==0){
+//             temp =1;
+//             break;
+//         }
+//     }
+//     if (temp==0){
+//         cond2=1;
+//     }else{
+//         cond2=0;
+//     }
+//     if (cond1&&cond2){
+//         printf("Prime Palindrome");
+//     }else if(cond1&&(!cond2)){}
+// }
 
 
 // 13 freq
-// #include <stdio.h>
-// int main() {
-//     int n, temp, digit, i, j, count, isPrime;
+#include <stdio.h>
+int main() {
+    int n, temp, digit, i, j, count, isPrime;
 
-//     printf("Enter a number: ");
-//     scanf("%d", &n);
+    printf("Enter a number: ");
+    scanf("%d", &n);
 
-//     for(i = 0; i <= 9; i++) {     // check for each digit (0–9)
-//         count = 0;
-//         temp = n;
+    for(i = 0; i <= 9; i++) {     // check for each digit (0–9)
+        count = 0;
+        temp = n;
 
-//         for(; temp > 0; temp /= 10) {
-//             digit = temp % 10;
-//             if(digit == i)
-//                 count++;
-//         }
+        for(; temp > 0; temp /= 10) {
+            digit = temp % 10;
+            if(digit == i)
+                count++;
+        }
 
-//         if(count > 0) {
-//             isPrime = 1;
+        if(count > 0) {
+            isPrime = 1;
 
-//             if(count <= 1)
-//                 isPrime = 0;
+            if(count <= 1)
+                isPrime = 0;
 
-//             for(j = 2; j <= count/2; j++) {
-//                 if(count % j == 0) {
-//                     isPrime = 0;
-//                     break;
-//                 }
-//             }
+            for(j = 2; j <= count/2; j++) {
+                if(count % j == 0) {
+                    isPrime = 0;
+                    break;
+                }
+            }
 
-//             if(isPrime)
-//                 printf("Digit %d appears %d times (Prime)\n", i, count);
-//             else
-//                 printf("Digit %d appears %d times (Not Prime)\n", i, count);
-//         }
-//     }
+            if(isPrime)
+                printf("Digit %d appears %d times (Prime)\n", i, count);
+            else
+                printf("Digit %d appears %d times (Not Prime)\n", i, count);
+        }
+    }
 
-//     return 0;
-// }
+    return 0;
+}

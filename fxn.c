@@ -40,13 +40,12 @@
 //     printf("%d",ans);
 // }
 
-//3. print all odd nos from 1 to 20
+// //3. print all odd nos from 1 to 20
 // #include <stdio.h>
 // int odd(){
 //     for(int i=1;i<=20;i++){
 //         printf("%d\n",i);
-//     }
-// } 
+// }} 
 // int main(){
 //     odd();
 // }
@@ -119,7 +118,7 @@
 //     even(123456789);
 // }
 
-// 8.pallendrome
+// // 8.pallendrome
 // #include <stdio.h>
 // void pal(int n){
 //     int og=n;
@@ -133,8 +132,7 @@
 //         printf("Pallendrome");
 //     }else{
 //         printf("Not a Pallendrome");
-//     }
-// }
+//     }}
 // int main(){
 //     pal(13131);
 // }
@@ -213,27 +211,18 @@
 
 
 // 12. Fibonacci
-#include <stdio.h>
-void fib(int num){
-    // way 1
-    // int a=0,b=1;
-    // for(int i=1;i<=num/2;i++){
-    //     printf("%d %d ",a,b);
-    //     a=a+b;
-    //     b=a+b;
-    // }
-
-    // way 2
-    int f=0,s=1,sum=0;
-    printf("%d %d ",f,s);
-    for (int i=1;i<=num-2;i++){
-        sum=f+s;
-        f=s;
-        s=sum;
-        printf("%d ",sum);
-    }
-}
-int main(){
-    fib(10);
-}
+// #include <stdio.h>
+// void fib(int num){
+//     int f=0,s=1,sum=0;
+//     printf("%d %d ",f,s);
+//     for (int i=1;i<=num-2;i++){
+//         sum=f+s;
+//         f=s;
+//         s=sum;
+//         printf("%d ",sum);
+//     }
+// }
+// int main(){
+//     fib(10);
+// }
 

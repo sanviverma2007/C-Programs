@@ -362,7 +362,7 @@
 // right angled triangle
 // #include <stdio.h>
 // int main(){
-//     for(int i=1;i>=5;i++){
+//     for(int i=1;i<=5;i++){
 //         for (int j=1;j<=i;j++){
 //             printf("* ");
 //         }
@@ -373,7 +373,7 @@
 // inverted triangle
 // #include <stdio.h>
 // int main(){
-//     for(int i=1;i>=5;i++){
+//     for(int i=1;i=5;i++){
 //         for (int j=1;j<=i;j++){
 //             printf("* ");
 //         }
@@ -421,7 +421,7 @@
 //     printf("\n");
 // }}
 
-// 1010 triangle
+// // 1010 triangle
 // #include <stdio.h>
 // int main(){
 //     for(int i=1;i<5;i++){

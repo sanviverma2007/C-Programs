@@ -2,12 +2,12 @@
 #include <stdio.h>
 int main(){
     int n;
-    int sum;
+    int ans;
     int i=1;
     scanf("%d",&n);
     do{
-        sum = n*i;
-        printf("%d x %d = %d",n,i,sum);
+        ans = n*i;
+        printf("%d x %d = %d",n,i,ans);
         i++;
     }while(i<=10);
     return 0;

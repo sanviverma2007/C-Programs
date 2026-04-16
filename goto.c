@@ -1,14 +1,14 @@
 // print numbers from 1 to 10
-#include <stdio.h>
-int main(){
-    int i=1;
-    fxn:
-    printf("%d\n",i);
-    i++;
-    if(i<=10){
-        goto fxn;
-    }
-}
+// #include <stdio.h>
+// int main(){
+//     int i=1;
+//     fxn:
+//     printf("%d\n",i);
+//     i++;
+//     if(i<=10){
+//         goto fxn;
+//     }
+// }
 
 
 // // print the numbers in reverse order 10 to 1
@@ -40,16 +40,16 @@ int main(){
 // }
 
 // // print the table of user input
-// #include <stdio.h>
-// int main(){
-//     int a;
-//     int b=1;
-//     scanf("%d",&a);
-//     fxn:
-//     printf("%d x %d = %d\n",a,b,a*b);
-//     b++;
-//     if(b<=10){
-//         goto fxn;
-//     }
-//     return 0;
-// }
+#include <stdio.h>
+int main(){
+    int a;
+    int b=1;
+    scanf("%d",&a);
+    fxn:
+    printf("%d x %d = %d\n",a,b,a*b);
+    b++;
+    if(b<=10){
+        goto fxn;
+    }
+    return 0;
+}
